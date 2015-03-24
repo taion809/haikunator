@@ -2,6 +2,9 @@
 
 Golang port of haikunator
 
+## Installation
+`go get github.com/taion809/haikunator`
+
 ## Example
 ```go
 package main
@@ -12,12 +15,43 @@ import (
 )
 
 func main() {
-	h := haikunator.NewHaikunator()
-	haiku := h.Haikunator()
+	var haiku string
 
-	fmt.Println(haiku)
+	h := haikunator.NewHaikunator()
+
+	// Default haiku
+	haiku = h.Haikunate()
+	fmt.Println("Default: ", haiku) // => "long-smoke-5866"
+
+	// Token range
+	haiku = h.TokenHaikunate(100000)
+	fmt.Println("With Token: ", haiku) // => "aged-pond-74896"
+
+	// Don't include token
+	haiku = h.DelimHaikunate("-")
+	fmt.Println("With Delim: ", haiku) // => "wandering-water"
+
+	// Use different delim without a token
+	haiku = h.DelimHaikunate(".")
+	fmt.Println("With Delim: ", haiku) // => "wandering.water"
+	
+	// Change token range and delimiter
+	haiku = h.TokenDelimHaikunate(100000, ".")
+	fmt.Println("With Token and Delim: ", haiku) // => "holy.pine.60124"
+
+	// No token and space delimiter
+	haiku = h.TokenDelimHaikunate(0, " ")
+	fmt.Println("With Token and Delim: ", haiku) // => "holy pine"
 }
 ```
 
+## Other Languages
+
+Haikunator is also available in other languages. Check them out:
+
+- Node: https://github.com/AtroxDev/haikunatorjs
+- Python: https://github.com/AtroxDev/haikunator
+- Go: https://github.com/yelinaung/go-haikunator
+
 ## License
-Mit: See LICENSE for details
+This project is licensed under the MIT License.
