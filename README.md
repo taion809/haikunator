@@ -52,6 +52,7 @@ Godoc can be found [here.](http://godoc.org/github.com/taion809/haikunator)
 
 Haikunator is also available in other languages. Check them out:
 
+- Ruby: https://github.com/usmanbashir/haikunator
 - Node: https://github.com/AtroxDev/haikunatorjs
 - Python: https://github.com/AtroxDev/haikunator
 - Go: https://github.com/yelinaung/go-haikunator
