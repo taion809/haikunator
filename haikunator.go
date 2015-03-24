@@ -81,9 +81,3 @@ func (h *Haikunator) TokenDelimHaikunate(token int64, delim string) string {
 	return h.haikunate(tokenString, delim)
 }
 
-func main() {
-	h := NewHaikunator()
-
-	name := h.Haikunate()
-	fmt.Println("Haiku: ", name)
-}
