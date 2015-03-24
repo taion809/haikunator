@@ -45,6 +45,9 @@ func main() {
 }
 ```
 
+## Documentation
+Godoc can be found [here.](http://godoc.org/github.com/taion809/haikunator)
+
 ## Other Languages
 
 Haikunator is also available in other languages. Check them out:
